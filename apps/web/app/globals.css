@@ -9,7 +9,7 @@
     --hover-color: #cccccc;
     --pressed-color: #888888;
     --disabled-color: #e0e0e0;
-    
+    --secondary-color: #333333;
     --background-color: #f0f0f0;
     --primary-color: #000000;
     --secondary-color: #333333;
@@ -28,19 +28,19 @@
     --hover-color: #FBBF24;
     --pressed-color: #D97706;
     --disabled-color: #F59E0B;
-  
+    --secondary-color: #333333;
     --background-color: #0C0A09;
     --primary-color: #F59E0B;
     --secondary-color: #A8A29E;
     --color-text:#D6D3D1;
-
+    --surface-colour: #000000;
 
     --button-radius-huge:16px;
     --button-radius-big:12px;
     --badge-radius-big:8px;
   
     --button-radius: 6px;
-
+    --secondary-color: #333333;
     --success-primary: #BEF264;
     --warning-primary: #FDE047;
     --error-primary: #F87171;
@@ -59,11 +59,11 @@
     --background-color: #0C0A09;
     --primary-color: #0EA5E9;
     --secondary-color: #A8A29E;
-  
+    --secondary-color: #333333;
     --button-radius-huge: 99999px;
     --button-radius-big: 9999px;
     --badge-radius-big: 9999px;
-  
+    --surface-colour: #000000;
     --button-radius: 0.5rem;
 
 
@@ -90,7 +90,8 @@
   --button-radius-big: 0px;  
   --badge-radius-big: 0px;  
   --button-radius: 0px;
-
+  --surface-colour: #000000;
+  --secondary-color: #000000;
   --success-primary: #94A3B8;
   --warning-primary: #FFFFFF;
   --error-primary: #FFFFFF;

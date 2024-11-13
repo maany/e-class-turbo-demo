@@ -3,7 +3,6 @@ module.exports = {
     content: [
      
         `app/**/*.{js,ts,jsx,tsx}`,
-        `./pages/**/*.{js,ts,jsx,tsx}`,
         `./components/**/*.{js,ts,jsx,tsx}`,
         // packages content
         '../../packages/**/*.{js,ts,jsx,tsx}',
@@ -15,6 +14,7 @@ module.exports = {
           secondary: "var(--secondary-color)",
           tbase: "var(--color-text)",
           bgprimary: "var(--background-color)",
+          surfacecolour: "var(--surface-colour)",
           button: {
             DEFAULT: "var(--default-color)",
             hover: "var(--hover-color)",

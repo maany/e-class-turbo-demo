@@ -1,0 +1,28 @@
+{
+    "cardLangDemo":{
+        "courseCatalog": "Catálogo de Cursos",
+        "coachingTitle1": "Entrenamiento a Demanda-1",
+        "coachingDescription1": "Nuestros profesionales brindan apoyo donde se necesita. Con talleres, consejos y “aprender haciendo” podemos alcanzar nuestras metas juntos más rápidamente.",
+        "buttonText1": "Encuentra un coach (desde CHF 90)",
+        "coachingTitle2": "Entrenamiento a Demanda-2",
+        "coachingDescription2": "Nuestros profesionales brindan apoyo donde se necesita. Con talleres, consejos y “aprender haciendo” podemos alcanzar nuestras metas juntos más rápidamente.",
+        "buttonText2": "Encuentra un coach (desde CHF 90)"
+    },
+    "common":{
+        
+          "Just Do AD Project": "Simplemente Haz AD Proyecto",
+          "start_code_along": "Comienza Código Junto",
+          "Explore Components": "Explora Componentes",
+          "Discover our amazing components and features": "Descubre nuestros increíbles componentes y características"
+
+          
+    },
+    "courseCard":{
+        
+  "title": "Título del Tema",
+  "imageUrl": "/courses/22.png",
+  "courseCount": "cursos",
+  "description": "Este curso te enseña a crear identidades de marca poderosas y coherentes que resuenen con las audiencias y se destaquen en el mercado.",
+  "viewCourse": "Ver Curso"
+    }
+}
