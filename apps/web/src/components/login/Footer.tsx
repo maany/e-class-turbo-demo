@@ -14,6 +14,7 @@ export const Footer = (): JSX.Element => {
       <div className="container ">
         <div className="flex flex-col w-full md:flex-row  items-center md:items-start gap-4 md:gap-0 justify-end">
           {/* Left side: Logo */}
+          {/* main code */}
           <div className="flex items-center justify-between w-1/4 md:w-auto">
             <Image
               alt="Logo just do ad"
