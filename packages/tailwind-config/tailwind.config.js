@@ -3,7 +3,7 @@ module.exports = {
     content: [
      
         `app/**/*.{js,ts,jsx,tsx}`,
-        `./components/**/*.{js,ts,jsx,tsx}`,
+        '../../apps/web/src/components/**/*.{js,ts,jsx,tsx}',
         // packages content
         '../../packages/**/*.{js,ts,jsx,tsx}',
     ],

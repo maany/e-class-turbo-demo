@@ -1,6 +1,6 @@
 import React from 'react';
-import Badge from '../badges/Badge';
-import Button from '../buttons/Button';
+import Badge from '@repo/ui/badge';
+import Button from '@repo/ui/button';
 
 interface CustomCardProps {
   title: string;

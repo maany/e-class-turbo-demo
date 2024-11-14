@@ -6,7 +6,9 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navbar";
-import ThemeProvider from "@/Contextprovider/Themecontext";
+import ThemeProvider from "@/context/Themecontext";
+import Navigation from "@/components/login/Navigation";
+import Footer from "@/components/login/Footer";
 
 // Font definitions
 const nunito = Nunito({
@@ -53,15 +55,9 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <div className="w-full min-h-screen  bg-surfacecolour">
-              <Navbar locale={locale} />
-              <main className="flex flex-1 pt-16">{children}</main>
-              <footer className="bg-surface/50 backdrop-blur-sm py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="text-center text-secondary">
-                    <p>© 2024 Your Project. All rights reserved.</p>
-                  </div>
-                </div>
-              </footer>
+              <Navigation />
+              <main className="flex flex-1 pt-22">{children}</main>
+              <Footer />
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>

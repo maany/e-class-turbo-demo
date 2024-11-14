@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from 'react';
 import Image from 'next/image';
-import eyeIcon from '../../public/icons/eye.png'; // Update the path to your eye icon image
+// import eyeIcon from '../../public/icons/eye.png'; // Update the path to your eye icon image
 
 interface TextInputProps {
   label: string;
@@ -35,13 +37,13 @@ const TextInput: React.FC<TextInputProps> = ({ label, placeholder, type, showPas
             className="absolute right-3 top-1/2 transform -translate-y-1/2"
             aria-label={showPassword ? 'Hide password' : 'Show password'}
           >
-            <Image
+            {/* <Image
               src={eyeIcon}
               alt={showPassword ? 'Hide password' : 'Show password'}
               width={24}
               height={24}
               className="object-contain shrink-0 self-stretch my-auto aspect-square"
-            />
+            /> */}
           </button>
         )}
       </div>

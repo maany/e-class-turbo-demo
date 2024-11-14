@@ -1,5 +1,5 @@
 {
-    "cardLangDemo":{
+    "cardLangDemo": {
         "courseCatalog": "Course Catalog",
         "coachingTitle1": "Coaching on Demand-1",
         "coachingDescription1": "Our professionals provide support where they are needed. With workshops, tips and “learning by doing” we can reach our goals together more quickly.",
@@ -8,22 +8,17 @@
         "coachingDescription2": "Our professionals provide support where they are needed. With workshops, tips and “learning by doing” we can reach our goals together more quickly.",
         "buttonText2": "Find a coach (ab CHF 90)"
     },
-    "common":{
-        
-            "Just Do AD Project": "Just Do AD Project",
-            "start_code_along": "Start Code Along",
-            "Explore Components": "Explore Components",
-            "Discover our amazing components and features": "Discover our amazing components and features"
-        
-          
+    "common": {
+        "Just Do AD Project": "Just Do AD Project",
+        "start_code_along": "Start Code Along",
+        "Explore Components": "Explore Components",
+        "Discover our amazing components and features": "Discover our amazing components and features"
     },
-    "courseCard":{
-        
-            "title": "Topic Title",
-            "imageUrl": "/courses/22.png",
-            "courseCount": "courses",
-            "description": "This course teaches you how to create powerful, cohesive brand identities that resonate with audiences and stand out in the marketplace.",
-            "viewCourse": "View Course"
-          
+    "courseCard": {
+        "title": "Topic Title",
+        "imageUrl": "/courses/22.png",
+        "courseCount": "courses",
+        "description": "This course teaches you how to create powerful, cohesive brand identities that resonate with audiences and stand out in the marketplace.",
+        "viewCourse": "View Course"
     }
 }

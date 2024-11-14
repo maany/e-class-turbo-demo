@@ -1,6 +1,6 @@
 import React from 'react';
 import TextInput from './TextInput';
-import Button from '../buttons/Button';
+import Button from '@repo/ui/button';
 
 interface LoginCardProps {}
 
