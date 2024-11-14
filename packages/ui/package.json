@@ -8,7 +8,6 @@
     "./accordian": "./src/accordian.tsx",
     "./input":"./src/accordian.tsx",
     "./badge":"./src/badge.tsx"
-
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

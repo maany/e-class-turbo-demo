@@ -11,10 +11,9 @@ export const Footer = (): JSX.Element => {
 
   return (
     <footer className="bg-stone-950 px-4 md:px-6 py-8 w-full">
-      <div className="container ">
-        <div className="flex flex-col w-full md:flex-row  items-center md:items-start gap-4 md:gap-0 justify-end">
+      <div className="container mx-auto">
+        <div className="flex flex-col w-full md:flex-row  items-center md:items-start gap-8 md:gap-0 justify-between">
           {/* Left side: Logo */}
-          {/* main code */}
           <div className="flex items-center justify-between w-1/4 md:w-auto">
             <Image
               alt="Logo just do ad"
