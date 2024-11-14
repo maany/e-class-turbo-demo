@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Nunito, Raleway, Roboto } from 'next/font/google';
-import "../globals.css";
-import ThemeProvider from "../../Contextprovider/Themecontext";
+import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import Navbar from "../../src/components/Navbar";
-import { routing } from "../../src/i18n/routing";
 import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import Navbar from "@/components/Navbar";
+import ThemeProvider from "@/Contextprovider/Themecontext";
 
 // Font definitions
 const nunito = Nunito({
@@ -39,12 +39,12 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string }
 }) {
-  // Validate locale
+
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
- 
+
   const messages = await getMessages();
 
   return (
@@ -52,9 +52,9 @@ export default async function RootLayout({
       <body className={`${nunito.variable} ${roboto.variable} ${raleway.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <div className="w-full min-h-screen flex flex-col bg-surfacecolour">
-              <Navbar />
-               <main className="flex flex-1 pt-10">{children}</main>
+            <div className="w-full min-h-screen  bg-surfacecolour">
+              <Navbar locale={locale} />
+              <main className="flex flex-1 pt-16">{children}</main>
               <footer className="bg-surface/50 backdrop-blur-sm py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="text-center text-secondary">

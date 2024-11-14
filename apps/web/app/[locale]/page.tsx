@@ -4,6 +4,7 @@
 import {  ChevronRight } from 'lucide-react';
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+
 type ParamsType = {
   params: {
     locale: string;
@@ -30,6 +31,7 @@ export default function Home({params}:ParamsType) {
     <div className="min-h-screen  flex w-full flex-col items-center">
     
       {/* Hero Section */}
+   
       <div className="pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center flex flex-col justify-center h-full">
@@ -42,7 +44,7 @@ export default function Home({params}:ParamsType) {
           </div>
         </div>
       </div>
-    
+  
       {/* Components Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <h2 className="text-3xl font-bold text-primary mb-8 text-center">
