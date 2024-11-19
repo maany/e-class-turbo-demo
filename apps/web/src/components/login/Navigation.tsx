@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import Button from "@repo/ui/button";
 import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "@/context/Themecontext";
+import Link from "next/link";
 
 // Mapping the navigation items to their respective routes
 const navigationItems = [
@@ -42,13 +43,15 @@ export const Navigation = ({ locale }: { locale: string }): JSX.Element => {
       <nav className=" w-full flex items-center justify-between">
         {/* Logo */}
         <div className="w-12 h-12 md:w-16 md:h-16">
-          <Image
-            src={"/courses/justdoad.png"}
-            alt="Logo just do ad"
-            width={44}
-            height={62}
-            className="object-contain"
-          />
+        <Link href="/home" legacyBehavior> 
+          <a> 
+            <Image src="/courses/justdoad.png" 
+            alt="Logo just do ad" 
+            width={44} 
+            height={62} 
+            className="object-contain" /> 
+            </a> 
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -94,7 +97,7 @@ export const Navigation = ({ locale }: { locale: string }): JSX.Element => {
         </button>
 
         {/* Theme Selector (Desktop) */}
-        <div className="hidden md:flex ml-[5px]">
+        <div className="hidden md:flex ml-[16px] gap-1">
           {themes.map((them) => (
             <button
               key={them}
