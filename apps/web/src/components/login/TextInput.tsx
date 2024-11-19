@@ -42,7 +42,7 @@ const TextInput: React.FC<TextInputProps> = ({
           onChange={(e) => onChange(e.target.value)}
           onBlur={onBlur}
           className={`flex flex-col justify-center px-3 py-1.5 w-full text-xl rounded-lg border border-solid bg-stone-950 
-            ${error ? 'border-red-500' : 'border-stone-800'} min-h-[40px] text-stone-50`}
+    ${error ? 'border-red-500' : 'border-stone-800'} min-h-[40px] text-stone-50 pr-10`} // Add pr-10 for padding
           aria-label={label}
         />
         {showPasswordToggle && (
