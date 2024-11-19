@@ -1,8 +1,10 @@
 "use client";
+
 import React from 'react';
 import { z } from 'zod';
 import TextInput from './TextInput';
 import Button from '@repo/ui/button';
+import { useRouter } from 'next/navigation';  // Import useRouter
 
 const loginSchema = z.object({
   email: z.string()
@@ -18,6 +20,7 @@ const loginSchema = z.object({
 type LoginFormData = z.infer<typeof loginSchema>;
 
 const LoginCard: React.FC = () => {
+  const router = useRouter();  // Initialize the router for navigation
   const [formData, setFormData] = React.useState<LoginFormData>({
     email: '',
     password: ''
@@ -60,6 +63,11 @@ const LoginCard: React.FC = () => {
     }
   };
 
+  // Navigation to sign-up page
+  const handleSignUpClick = () => {
+    router.push("/signup");  // Redirect to the sign-up page
+  };
+
   return (
     <main className="flex sm:w-[435px] w-full overflow-hidden flex-col justify-center p-4 sm:p-8 rounded-2xl border border-solid bg-stone-900 border-stone-800">
       <div className="flex flex-col w-full">
@@ -98,7 +106,9 @@ const LoginCard: React.FC = () => {
               <p className="self-stretch my-auto text-base text-stone-300">
                 Don't have an account?
               </p>
-              <Button variant="text">Sign up</Button>
+              <Button variant="text" onClick={handleSignUpClick}>
+                Sign up
+              </Button>
             </div>
           </div>
         </form>

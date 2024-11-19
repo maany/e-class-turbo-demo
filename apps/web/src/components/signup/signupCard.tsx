@@ -1,9 +1,9 @@
 "use client";
-
 import React from "react";
 import { z } from "zod";
 import TextInput from "../login/TextInput";
 import Button from "@repo/ui/button";
+import { useRouter } from "next/navigation";  
 
 // Define the schema for sign-up form validation
 const signUpSchema = z.object({
@@ -23,6 +23,7 @@ const signUpSchema = z.object({
 type SignUpFormData = z.infer<typeof signUpSchema>;
 
 const SignUpCard: React.FC = () => {
+  const router = useRouter(); // Initialize the router
   const [formData, setFormData] = React.useState<SignUpFormData>({
     firstName: "",
     lastName: "",
@@ -66,6 +67,11 @@ const SignUpCard: React.FC = () => {
         setErrors(newErrors);
       }
     }
+  };
+
+  // Navigation to login page
+  const handleLoginClick = () => {
+    router.push("/login");
   };
 
   return (
@@ -119,7 +125,7 @@ const SignUpCard: React.FC = () => {
             label="Coupons"
             placeholder="Coupon code (optional)"
             type="text"
-            value={formData.coupon ?? ''}
+            value={formData.coupon ?? ""}
             onChange={(value: any) => setFormData((prev) => ({ ...prev, coupon: value }))}
             onBlur={() => validateField("coupon")}
             error={errors.coupon}
@@ -132,7 +138,9 @@ const SignUpCard: React.FC = () => {
               <p className="self-stretch my-auto text-base text-stone-300">
                 Already have an account?
               </p>
-              <Button variant="text">Login</Button>
+              <Button variant="text" onClick={handleLoginClick}>
+                Login
+              </Button>
             </div>
           </div>
         </form>
