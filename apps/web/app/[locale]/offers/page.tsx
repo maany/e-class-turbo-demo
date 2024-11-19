@@ -24,7 +24,7 @@ function page() {
         </div>
       </div>
       <div className='flex flex-col gap-10 mb-10'>
-      <hr className='h-[0.4px] w-[98%] bg-[#44403C] border-none' />
+        <hr className='h-[0.4px] w-full bg-[#44403C] border-none' />
         <h3 className='lg:text-5xl capitalize md:text-[26px] sm:text-[32px] text-bold'>our courses</h3>
         <div className='flex flex-wrap gap-3 w-full'>
           {coursesData?.map((each) => (<Coursescard course={each} />))
@@ -34,14 +34,14 @@ function page() {
         </div>
       </div>
       <div className='flex flex-col gap-10 mb-10'>
-      <hr className='h-[0.4px] w-[98%] bg-[#44403C] border-none' />
+        <hr className='h-[0.4px] w-full bg-[#44403C] border-none' />
         <h3 className='lg:text-5xl capitalize md:text-[26px] sm:text-[32px] text-bold'>our Packages</h3>
         <div className='flex flex-wrap gap-3 w-full'>
           {[...Array(6)].map((_, i) => (<BasicCardExample key={i} />))}
         </div>
       </div>
       <div className='flex flex-col gap-10 mb-10'>
-      <hr className='h-[0.4px] w-[98%] bg-[#44403C] border-none' />
+        <hr className='h-[0.4px] w-full bg-[#44403C] border-none' />
         <h3 className='lg:text-5xl capitalize md:text-[26px] sm:text-[32px] text-bold'>Coaching on demand</h3>
         <div className='flex flex-wrap gap-3 w-full'>
           {coachingData.map((each) => (<Coursesdemand course={each} />))
@@ -51,7 +51,7 @@ function page() {
         </div>
       </div>
       <div className='flex flex-col gap-10 mb-10'>
-      <hr className='h-[0.4px] w-[98%] bg-[#44403C] border-none' />
+        <hr className='h-[0.4px] w-full bg-[#44403C] border-none' />
         <h3 className='lg:text-5xl capitalize md:text-[26px] sm:text-[32px] text-bold w-full text-center'>Haven't found what your were looking for?</h3>
         <div className='flex flex-wrap gap-3 w-full'>
           <Cardpage />
