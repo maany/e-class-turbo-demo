@@ -8,7 +8,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "@/context/Themecontext";
 import Link from "next/link";
 
-// Mapping the navigation items to their respective routes
 const navigationItems = [
   { label: "Offers", route: "/offers" },
   { label: "Coaching", route: "/coaching" },
@@ -39,7 +38,7 @@ export const Navigation = ({ locale }: { locale: string }): JSX.Element => {
   };
 
   return (
-    <header className="fixed w-full z-20 px-4 md:px-6 py-4 bg-transparent backdrop-blur-sm max-w-screen-2xl">
+    <header className="fixed w-full z-20 px-4 md:px-6 py-4 bg-transparent backdrop-blur-md">
       <nav className=" w-full flex items-center justify-between">
         {/* Logo */}
         <div className="w-12 h-12 md:w-16 md:h-16">
@@ -53,17 +52,17 @@ export const Navigation = ({ locale }: { locale: string }): JSX.Element => {
             </a> 
           </Link>
         </div>
-
+        </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 ml-auto">
           {navigationItems.map((item) => (
-            <button
+            <Link
               key={item.label}
               className="p-4 text-white hover:text-amber-500 transition-colors"
-              onClick={() => handleNavigation(item.route)}
+             href={item.route}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
           <Button
             variant="primary"
@@ -85,7 +84,7 @@ export const Navigation = ({ locale }: { locale: string }): JSX.Element => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-amber-500 p-2 text-4xl"
+          className="md:hidden relative z-50 text-amber-500 p-2 text-4xl"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -110,35 +109,34 @@ export const Navigation = ({ locale }: { locale: string }): JSX.Element => {
                   : them === "blue"
                   ? "bg-blue-500"
                   : "bg-orange-700"
-              }`}
-            />
+              }`}/>
           ))}
         </div>
       </nav>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-black backdrop-blur-sm py-4 z-50">
-          <div className="container mx-auto px-4 flex flex-col items-center gap-4">
+        <div className="md:hidden -top-[0.1] transition-all  flex items-center justify-center absolute  min-h-screen left-0 right-0 bg-black  z-30">
+          <div className="px-4 w-full h-full flex flex-col items-center justify-center gap-4">
             {navigationItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                className="w-full text-center p-2 text-white hover:text-amber-500 transition-colors"
-                onClick={() => handleNavigation(item.route)}
+                className="w-full capitalize leading-[150%] tracking-wider text-center p-2 text-white hover:text-amber-500 transition-colors"
+              href={item.route}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
             <Button
               variant="primary"
-              className="w-2/3 justify-center py-2 rounded-lg"
+              className="w-1/6 justify-center py-2 rounded-lg"
               onClick={() => handleNavigation("/login")}
             >
               Login
             </Button>
             <select
               onChange={handleLocaleChange}
-              className="w-[50%] py-2 px-2 bg-transparent text-primary cursor-pointer"
+              className="w-1/6 py-2 px-2 bg-transparent text-primary cursor-pointer"
               value={locale}
             >
               <option value="en">English</option>
