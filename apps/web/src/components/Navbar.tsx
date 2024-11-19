@@ -1,11 +1,10 @@
 "use client"
 import React, { ChangeEvent } from 'react'
-
-
 const themes = ["orange", "blue", "dark-orange-shade"];
 import { usePathname, useRouter } from "next/navigation";
 import { Globe } from 'lucide-react';
 import { useTheme } from '@/context/Themecontext';
+
 function Navbar({ locale }: { locale: string }) {
 
     const { theme, setTheme } = useTheme();

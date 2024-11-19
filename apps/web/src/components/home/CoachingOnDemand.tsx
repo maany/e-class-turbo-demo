@@ -24,9 +24,9 @@ const imageData: ImageData[] = [
 
 const CoachingOnDemand: React.FC = () => {
     return (
-        <section className="mt-16 px-4 py-8 md:px-8 md:py-12 md:ml-20 md:mr-20">
+        <section className="md:px-16">
             {/* Title */}
-            <h1 className="text-3xl font-bold mb-4 text-left md:text-4xl text-[#FAFAF9]"> Coaching on Demand </h1>
+            <h1 className="md:text-3xl text-xl  font-bold mb-4 text-left lg:text-4xl text-[#FAFAF9]"> Coaching on Demand </h1>
 
             {/* Subtitle */}
             <p className="font-normal mb-4 text-left text-[#D6D3D1] text-xl">
@@ -34,7 +34,7 @@ const CoachingOnDemand: React.FC = () => {
                 do you want to learn new skills? <br /> Do you need support in choosing the right tools or advice for your project? Our industry
                 experts are ready to help you succeed. </p>
             {/* Image Gallery */}
-            <section className="flex z-0 flex-nowrap gap-0 items-center max-md:max-w-full">
+            <section className="flex z-0 flex-wrap items-center ">
                 {imageData.map((image, index) => (
                     <Image
                         height={500}
@@ -42,7 +42,7 @@ const CoachingOnDemand: React.FC = () => {
                         key={index}
                         src={image.src}
                         alt={image.alt}
-                        className={`object-cover my-auto w-1/3 h-full`}
+                        className={`object-cover md:w-1/2 w-full lg:w-1/3  h-full`}
                     />
                 ))}
             </section>

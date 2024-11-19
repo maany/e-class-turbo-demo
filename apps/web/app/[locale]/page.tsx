@@ -1,6 +1,4 @@
-
 "use client"
-
 import {  ChevronRight } from 'lucide-react';
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -24,7 +22,7 @@ export default function Home({params}:ParamsType) {
   //   localStorage.setItem('locale', locale);
   //   setLocale(locale);
   // };
-
+  
   const themes = ['orange', 'blue', 'dark-orange-shade'] as const;
 
   return (
@@ -54,11 +52,13 @@ export default function Home({params}:ParamsType) {
           {[
             { href: '/course', title: 'Custom Example Cards', description: 'Explore our comprehensive course catalog' },
             { href: '/table', title: 'Ag Grid-Table', description: 'View and manage data efficiently' },
-            { href: '/carouselPage', title: 'Carousel Theme demo', description: 'Interactive content showcase' },
-            { href: '/cardForm', title: 'Custom Card Editor', description: 'Build card form' },
-            { href: '/cardLangDemo', title: 'Card Language Demo', description: 'Here you can see the language change demo in [spanish , french and english]' },
+            // { href: '/carouselPage', title: 'Carousel Theme demo', description: 'Interactive content showcase' },
+            // { href: '/cardForm', title: 'Custom Card Editor', description: 'Build card form' },
+            // { href: '/cardLangDemo', title: 'Card Language Demo', description: 'Here you can see the language change demo in [spanish , french and english]' },
             { href: '/home', title: 'Home', description: 'Home page' },
             { href: '/login', title: 'Login', description: 'login page' },
+            { href: '/signup', title: 'SignUP', description: 'SignUP page' },
+            { href: '/offers', title: 'Offers', description: 'Offers page' },
           ].map((item) => (
             <Link href={`/${params.locale}/${item.href}`} key={item.href}>
               <div className="group relative bg-surface/50 backdrop-blur-sm rounded-xl p-6 hover:bg-surface/70 transition duration-300">

@@ -1,5 +1,3 @@
-
-
 import { forwardRef, ReactNode } from 'react';
 import { cn } from './lib/utils';
 
@@ -27,7 +25,7 @@ const Card=forwardRef<HTMLDivElement,CardProps>(({children,className,...props},r
     <div
       ref={ref}
       className={cn(
-        "rounded-lg border  text-card-foreground shadow-sm p-4",
+        "rounded-lg   text-card-foreground shadow-sm",
         className
       )}
       {...props}
@@ -68,7 +66,7 @@ const CardFooter= forwardRef<HTMLDivElement, CardFooterProps>(({ children, class
   return (
     <div
       ref={ref}
-      className={cn('flex flex-col space-y-1.5 p-6', className)}
+      className={cn('flex flex-col space-y-1.5', className)}
       {...props}
     >
       {children}

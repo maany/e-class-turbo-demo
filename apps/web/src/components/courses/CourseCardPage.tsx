@@ -32,7 +32,7 @@ const CourseCardPage: React.FC = () => {
     async function getCourses() {
       try{
        setloading(true);
-      const response = await fetch('/api/coursecard');
+       const response = await fetch('/en/api/coursecard');
       const data = await response.json();
       setCourses(data);
       setloading(false);

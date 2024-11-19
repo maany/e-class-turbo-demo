@@ -54,10 +54,13 @@ export default async function RootLayout({
       <body className={`${nunito.variable} ${roboto.variable} ${raleway.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <div className="w-full min-h-screen  bg-surfacecolour">
-              <Navigation />
-              <main className="flex flex-1 pt-22">{children}</main>
-              <Footer />
+            <div className="w-full min-h-screen bg-surfacecolour flex flex-col items-center">
+              <Navigation locale={locale} />
+              <main className="flex-grow w-full max-w-screen-2xl px-4 pt-24">
+                {children}
+                <Footer locale={locale} />
+              </main>
+             
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>

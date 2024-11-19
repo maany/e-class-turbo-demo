@@ -1,17 +1,28 @@
 "use client";
-
 import React, { useState } from 'react';
-import Image from 'next/image';
-// import eyeIcon from '../../public/icons/eye.png'; // Update the path to your eye icon image
+import { Eye, EyeOff } from 'lucide-react';
 
 interface TextInputProps {
   label: string;
   placeholder: string;
   type: 'text' | 'email' | 'password';
   showPasswordToggle?: boolean;
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+  onBlur?: () => void;
 }
 
-const TextInput: React.FC<TextInputProps> = ({ label, placeholder, type, showPasswordToggle = false }) => {
+const TextInput: React.FC<TextInputProps> = ({
+  label,
+  placeholder,
+  type,
+  showPasswordToggle = false,
+  value,
+  onChange,
+  error,
+  onBlur
+}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -27,7 +38,11 @@ const TextInput: React.FC<TextInputProps> = ({ label, placeholder, type, showPas
         <input
           type={showPassword ? 'text' : type}
           placeholder={placeholder}
-          className="flex flex-col justify-center px-3 py-1.5 w-full text-xl rounded-lg border border-solid bg-stone-950 border-stone-800 min-h-[40px] text-stone-50"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          onBlur={onBlur}
+          className={`flex flex-col justify-center px-3 py-1.5 w-full text-xl rounded-lg border border-solid bg-stone-950 
+            ${error ? 'border-red-500' : 'border-stone-800'} min-h-[40px] text-stone-50`}
           aria-label={label}
         />
         {showPasswordToggle && (
@@ -37,18 +52,18 @@ const TextInput: React.FC<TextInputProps> = ({ label, placeholder, type, showPas
             className="absolute right-3 top-1/2 transform -translate-y-1/2"
             aria-label={showPassword ? 'Hide password' : 'Show password'}
           >
-            {/* <Image
-              src={eyeIcon}
-              alt={showPassword ? 'Hide password' : 'Show password'}
-              width={24}
-              height={24}
-              className="object-contain shrink-0 self-stretch my-auto aspect-square"
-            /> */}
+            {showPassword ? (
+              <EyeOff className="w-6 h-6 text-stone-400" />
+            ) : (
+              <Eye className="w-6 h-6 text-stone-400" />
+            )}
           </button>
         )}
       </div>
+      {error && (
+        <span className="mt-1 text-sm text-red-500">{error}</span>
+      )}
     </div>
   );
 };
-
 export default TextInput;
