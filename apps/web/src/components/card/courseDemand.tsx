@@ -13,7 +13,7 @@ export interface CoachingdemandProps {
     skills: string[];
     description: string;
     courses: Course[];
-    rating: number;
+    rating?: number;
     //   onDetailsClick?: () => void;
     //   onEnrollClick?: () => void;
 }

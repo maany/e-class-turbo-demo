@@ -18,7 +18,7 @@ interface CoachingdemandProps {
   skills: string[];
   description: string;
   courses: Course[];
-  rating: number;
+  rating?: number;
 }
 
 const Coursedemand: React.FC<{ course: CoachingdemandProps }> = ({ course }) => {
@@ -30,7 +30,7 @@ const Coursedemand: React.FC<{ course: CoachingdemandProps }> = ({ course }) => 
           <div>
             <p className="text-white">{course.coachName}</p>
             <div className="flex items-center gap-1">
-              <FractionalStarRating rating={course.rating} />
+              {course.rating && <FractionalStarRating rating={course.rating} />}
               <p className='text-sm'>{course.rating}</p>
             </div>
           </div>

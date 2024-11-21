@@ -1,5 +1,5 @@
 "use client"
-import { cn } from '../../lib/utils';
+import { cn } from '@repo/ui/utils';
 import React, { forwardRef, ReactNode } from 'react';
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;

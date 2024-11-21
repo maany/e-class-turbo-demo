@@ -50,11 +50,11 @@ const CourseCardPage: React.FC = () => {
 
       {loading|| courses.length>0 ?
          <>
-          <CustomCard data={courses[0]}/>
-          <CustomCard2 data={courses[1]}/>
-          <CustomCard3 data={courses[2]}/> 
-          <CustomCard4 data={courses[3]}/> 
-          <CustomCard5 data={courses[4]}/>
+          {courses[0] &&<CustomCard data={courses[0]}/>}
+          {courses[1] &&<CustomCard2 data={courses[1]}/>}
+          {courses[2] &&<CustomCard3 data={courses[2]}/> }
+          {courses[3] &&<CustomCard4 data={courses[3]}/> }
+          {courses[4] &&<CustomCard5 data={courses[4]}/>}
           </>:<div className='col-span-full min-h-[calc(100vh-2rem)] flex items-center justify-center'><AiOutlineLoading3Quarters className='animate-infinite text-primary' size={40}/></div>
 
         }

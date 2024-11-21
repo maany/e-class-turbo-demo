@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Button from '../buttons/Button';
+import Button from '@repo/ui/button';
 
 interface CourseCardProps {
   imageUrl: string;

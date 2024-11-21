@@ -15,24 +15,26 @@ const courses = [
 
 const Languageswitch: React.FC = () => {
   const { t } = useTranslation('cardLangDemo'); 
-
+  const data1 = {
+    title: t('coachingTitle1'),
+    description: t('coachingDescription1'),
+    imageSrc: '/customcards/3.png',
+    buttonText: t('buttonText1'),
+  }
+  const data2 = {
+    title: t('coachingTitle2'),
+    description: t('coachingDescription2'),
+    imageSrc: '/customcards/3.png',
+    buttonText: t('buttonText2'),
+  }
   return (
     <main className="p-5 min-h-screen">
       <h1 className="sr-only">{t('courseCatalog')}</h1>
       <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         {/* <CourseCardList courses={courses} role={role} /> */}
         
-        <CustomCard3
-          title={t('coachingTitle1')}
-          description={t('coachingDescription1')}
-          imageSrc="/customcards/3.png"
-          buttonText={t('buttonText1')}
-        />
-        <CustomCard3
-          title={t('coachingTitle2')}
-          description={t('coachingDescription2')}
-          imageSrc="/customcards/3.png"
-          buttonText={t('buttonText2')}
+        <CustomCard3 data={data1} />
+        <CustomCard3 data={data2}
         />
       </div>
     </main>

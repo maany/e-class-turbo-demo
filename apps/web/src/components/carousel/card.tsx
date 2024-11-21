@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter } from './carousel1';
 import Image from 'next/image';
 import Photo from "../../public/courses/33.png"
-import Button from "../buttons/Button";
+import Button from "@repo/ui/button";
 import { CiClock2, CiStar } from 'react-icons/ci';
-import Badge from '../badges/Badge';
+import Badge from '@repo/ui/badge';
 
 
 const BasicCardExample = () => {
